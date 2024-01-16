@@ -3,15 +3,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cherry+Bomb+One&family=Lato&family=Rubik+Doodle+Shadow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cherry+Bomb+One&family=Rubik+Doodle+Shadow&display=swap");
-
+@import url("https://fonts.cdnfonts.com/css/aileron");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+#body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
 .section {
   width: 100%;
+  /* height: 100vh; */
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -141,4 +150,142 @@ nav li:hover a {
 .cards div:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+
+#body1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  background-image: url(images/softbg.jpg);
+  background-size: 100% 100%;
+}
+.pic_container {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  height: 80vh;
+  width: 100%;
+  bottom: 0;
+}
+.pics {
+  /* height: 80vh; */
+  background-size: 100% 100%;
+  position: relative;
+  width: 30%;
+  height: 480px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pics:nth-child(1) {
+  background-image: url(2nd_page_photos/amazon.jpg);
+}
+.pics:nth-child(2) {
+  background-image: url(2nd_page_photos/Corels.jpg);
+}
+.pics:nth-child(3) {
+  background-image: url(2nd_page_photos/lava.jpg);
+}
+#body1 h1:nth-child(1) {
+  font-family: "Rubik Doodle Shadow";
+  position: absolute;
+  top: 5%;
+}
+.pics > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: -1500px;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pics div p {
+  font-family: "Nunito";
+}
+.pics:nth-child(1) div {
+  background-color: rgba(0, 66, 37, 0.8);
+}
+.pics:nth-child(3) div {
+  background-color: rgba(117, 14, 33, 0.8);
+}
+.pics:nth-child(2) div {
+  background-color: rgba(12, 53, 106, 0.8);
+}
+.pics > div h1 {
+  color: #fff;
+  position: relative;
+  align-self: center;
+}
+.pic_container .pics:hover > div {
+  bottom: 0;
+  border-radius: 15px; /*
+
+  font-weight: bold; */
+  color: #fff;
+  cursor: pointer;
+}
+
+#body2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#body2 .main_container {
+  position: absolute;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+}
+#body2 .main_container .container {
+  height: 480px;
+  width: 30%;
+  position: relative;
+  background-color: #c5e898;
+  bottom: 0;
+  transform: perspective(500px) rotateY(10deg);
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: -22px 29px 25px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#body2 .main_container .container:hover {
+  transform: perspective(500px) rotateY(0deg);
+  cursor: pointer;
+}
+#body2 .main_container .container img {
+  position: relative;
+  height: 50%;
+  width: 100%;
+}
+#body2 .main_container .container div {
+  height: 50%;
+  position: relative;
+  line-height: 1.75em;
+  padding: 10px;
+}
+#body2 .main_container .container h2 {
+  line-height: 2.25em;
+  margin-left: 10px;
+}
+
+#body2 h1 {
+  color: #163020;
+  text-align: center;
+  top: 4%;
+  position: absolute;
+  font-family: "Aileron", sans-serif;
 }
